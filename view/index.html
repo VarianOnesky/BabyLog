@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cute and Sweet - Baby Shop Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/Express_400.font.js" type="text/javascript"></script>
+    <link href="css/nivo-slider.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js" language="javascript"></script>
+    <script type="text/javascript" src="js/jquery.tools.min.js" language="javascript"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <!-- start lightbox code -->
+    <link rel="stylesheet" href="css/jquery.lightbox-0.5.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/jquery.rounded.js"></script>
+    <!-- end lightbox code -->
+</head>
+<body ng-app="baby" ng-controller="babyController as babyCtrl">
+<div id="bg_top">
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo"><img src="images/logo2.png" width="300" height="92" alt="Logo" /></div>
+            <div id="header_photos">
+                <div class="one"><img src="images/header-flower1.png" alt="1" width="118" height="121" /></div>
+                <div class="two"><img src="images/header-flower2.png" alt="2" width="144" height="149" /></div>
+                <div class="three"><img src="images/header-flower3.png" alt="3" width="118" height="121" /></div>
+            </div>
+            <div id="menu">
+                <ul id="navigation">
+                    <li><a href="#" ng-click="babyCtrl.view = 'Home'" ng-class="{active:babyCtrl.view == 'Home'}">Home</a></li>
+                    <li><a href="#" ng-click="babyCtrl.view = 'Logs'; babyCtrl.logsView = ''" ng-class="{active:babyCtrl.view == 'Logs'}">Logs</a></li>
+                    <!-- close the services <li>-->
+                </ul>
+            </div>
+            <!--end menu-->
+        </div>
+        <!--end header-->
+        <div id="content_bg">
+            <div id="sidebar">
+                <!-- start menu -->
+                <div id="menu_string"><img src="images/tag-string.png" width="178" height="22" alt="string" /></div>
+                <div id="menu_wrapper">
+                    <div id="menu_header">
+                        <div id="menu_footer">
+                            <h3>Today</h3>
+                            <ul>
+                                <li><a>&nbsp;</a></li>
+                                <li><a>2015-07-25</a></li>
+                                <li><a>&nbsp;</a></li>
+                                <li><a>Saturday</a></li>
+                                <li><a>&nbsp;</a></li>
+                                <li><a>Day 1</a></li>
+                            </ul>
+                            <br class="clear" />
+                        </div>
+                    </div>
+                </div>
+                <br class="clear" />
+            </div>
+            <div id="main_content" ng-show="babyCtrl.view == 'Home'">
+                HOME
+            </div>
+            <div id="main_content" ng-show="babyCtrl.view == 'Logs'">
+                <h1>
+                    <span ng-show="babyCtrl.logsView == ''">Baby Logs</span>
+                    <span ng-hide="babyCtrl.logsView == ''"><a href="#" ng-click="babyCtrl.logsView = ''">Baby Logs</a></span>
+                    <span ng-hide="babyCtrl.logsView == ''">-</span>
+                    <span ng-show="babyCtrl.logsView == 'breastFeeding'">Breast Feeding</span>
+                    <span ng-show="babyCtrl.logsView == 'ebmBottleFeeding'">EBM Bottle Feeding</span>
+                    <span ng-show="babyCtrl.logsView == 'changing'">Changing</span>
+                    <span ng-show="babyCtrl.logsView == 'sleeping'">Sleeping</span>
+                </h1>
+                <p>&nbsp;</p>
+                <ul class="product_list">
+                    <li ng-click="babyCtrl.logsView = 'breastFeeding'" ng-show="babyCtrl.logsView == '' || babyCtrl.logsView == 'breastFeeding'">
+                        <!--start product thumb-->
+                        <div class="product">
+                            <div class="thumb"><a href="#"><img src="images-content/breastfeeding.jpg" alt="Product Thumb" width="154" height="154" border="0" class="rounded"/></a></div>
+                            <div class="title">Breast Feeding</div>
+                        </div>
+                        <!--end product thumb-->
+                    </li>
+                    <li ng-click="babyCtrl.logsView = 'ebmBottleFeeding'" ng-show="babyCtrl.logsView == '' || babyCtrl.logsView == 'ebmBottleFeeding'">
+                        <!--start product thumb-->
+                        <div class="product">
+                            <div class="thumb"><a href="#"><img src="images-content/bottlefeeding.jpg" alt="Product Thumb" width="154" height="154" border="0" class="rounded"/></a></div>
+                            <div class="title">EBM Bottle Feeding</div>
+                        </div>
+                        <!--end product thumb-->
+                    </li>
+                    <li ng-click="babyCtrl.logsView = 'changing'" ng-show="babyCtrl.logsView == '' || babyCtrl.logsView == 'changing'">
+                        <!--start product thumb-->
+                        <div class="product">
+                            <div class="thumb"><a href="#"><img src="images-content/changing.jpg" alt="Product Thumb" width="154" height="154" border="0" class="rounded"/></a></div>
+                            <div class="title">Changing</div>
+                        </div>
+                        <!--end product thumb-->
+                    </li>
+                    <li ng-click="babyCtrl.logsView = 'sleeping'" ng-show="babyCtrl.logsView == '' || babyCtrl.logsView == 'sleeping'">
+                        <!--start product thumb-->
+                        <div class="product">
+                            <div class="thumb"><a href="#"><img src="images-content/sleeping.jpg" alt="Product Thumb" width="154" height="154" border="0" class="rounded"/></a></div>
+                            <div class="title">Sleeping</div>
+                        </div>
+                        <!--end product thumb-->
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <div ng-show="babyCtrl.logsView == 'breastFeeding'">
+                    <h2>Breast Feeding</h2>
+                    <form>
+
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>5 min</option>
+                                <option>10 min</option>
+                                <option>15 min</option>
+                                <option>20 min</option>
+                                <option>25 min</option>
+                                <option>30 min</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-success btn-lg btn-block">Submit</button>
+                    </form>
+                </div>
+                <div ng-show="babyCtrl.logsView == 'ebmBottleFeeding'">
+                    <h2>EBM Bottle Feeding</h2>
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control" />
+                                <div class="input-group-addon">ml</div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success btn-lg btn-block">Submit</button>
+                    </form>
+                </div>
+                <div ng-show="babyCtrl.logsView == 'changing'">
+                    <h2>Changing</h2>
+                    <form>
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default btn-lg btn-block">PooPoo</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default btn-lg btn-block">VeeVee</button>
+                            </div>
+                        </div>
+                        <p>&nbsp;</p>
+                        <button type="button" class="btn btn-success btn-lg btn-block">Submit</button>
+                    </form>
+                </div>
+                <div ng-show="babyCtrl.logsView == 'sleeping'">
+                    <h2>Sleeping</h2>
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control" />
+                                <div class="input-group-addon">minutes</div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success btn-lg btn-block">Submit</button>
+                    </form>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--end content bg-->
+        <div id="footer">
+            <ul>
+                <li> &copy; Cute and Sweet  | </li>
+                <li><a href="#">Terms &amp; Conditions</a> | </li>
+                <li><a href="#">Postage</a> | </li>
+                <li><a href="#">Privacy</a> | </li>
+                <li><a href="http://themeforest.net/user/dtbaker" target="_blank">Design by Dtbaker | </a></li>
+                <li><a href="http://themeforest.net/item/cute-sweet-3-color-html-php-shopping-cart/149215?ref=dtbaker" target="_blank">Purchase this template here</a></li>
+            </ul>
+        </div>
+        <!--end footer-->
+    </div>
+    <!--end wrapper-->
+</div>
+<!--end bg_top-->
+<script type="text/javascript" src="js/angular.min.js" ></script>
+<script type="text/javascript" src="js/app.js" ></script>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
