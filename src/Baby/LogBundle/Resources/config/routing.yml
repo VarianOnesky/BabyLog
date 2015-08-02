@@ -1,3 +1,13 @@
 log_homepage:
     path:     /hello/{name}
     defaults: { _controller: LogBundle:Default:index }
+
+api_breast_feeding_list:
+    path:     /api/breast-feeding
+    defaults: { _controller: LogBundle:BreastFeeding:list }
+    methods:  [GET]
+
+api_breast_feeding_post:
+    path:     /api/breast-feeding
+    defaults: { _controller: LogBundle:BreastFeeding:post }
+    methods:  [POST]

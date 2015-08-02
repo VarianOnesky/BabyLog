@@ -1,0 +1,37 @@
+<?php
+
+namespace Baby\LogBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="log.breast_feeding")
+ */
+class BreastFeeding
+{
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="datetime", options={"comment":"time of record creation"})
+     */
+    protected $created_time;
+
+    /**
+     * @ORM\Column(type="datetime", options={"comment":"last update time"})
+     */
+    protected $updated_time;
+
+    /**
+     * @ORM\Column(type="integer", options={"comment":"feeding duration (in minute)"}))
+     */
+    protected $duration;
+
+    public function __construct()
+    {
+    }
+}
